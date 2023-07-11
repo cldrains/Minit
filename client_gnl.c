@@ -15,6 +15,7 @@
 
 /*
 Joins two Strings
+
 */
 unsigned char	*ft_join_mt(int len, int start,
 	unsigned char *src, unsigned char *dst)
