@@ -16,6 +16,7 @@
 /*
 makes sure that no utf8 char gets split
 if there is one on the end of the string
+aded comment
 */
 
 int	ft_line_end_c(unsigned char *buf, int len)
