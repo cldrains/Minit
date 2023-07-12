@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   Minitalk_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tevers <tevers@student.42heilbronn.de>     +#+  +:+       +#+        */
+/*   By: pepsi <pepsi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 05:25:48 by tevers            #+#    #+#             */
-/*   Updated: 2023/07/11 07:39:14 by tevers           ###   ########.fr       */
+/*   Updated: 2023/07/12 06:20:05 by pepsi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_BONUS_H
 # define MINITALK_BONUS_H
-# define BUFFER_SIZE_MT_C 10
-# define BUFFER_SIZE_MT_S 20
-# define SLEEP_TIME 80
+# define BUFFER_SIZE_MT_C 12
+# define BUFFER_SIZE_MT_S 22
+# define SLEEP_TIME 20
 # include "./libft/libft.h"
 # include <signal.h>
 
 typedef struct sigaction	t_sigaction;
-unsigned char				*g_str_c;
-unsigned char				*g_str_s;
+extern unsigned char				*g_str_c;
+extern unsigned char				*g_str_s;
 
 unsigned char	*ft_join_mt(int len, int start,
 					unsigned char *src, unsigned char *dst);

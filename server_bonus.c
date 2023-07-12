@@ -6,7 +6,7 @@
 /*   By: tevers <tevers@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 03:01:51 by tevers            #+#    #+#             */
-/*   Updated: 2023/07/11 09:02:44 by tevers           ###   ########.fr       */
+/*   Updated: 2023/07/12 06:40:59 by tevers           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ void	ft_handle_success_s(int c_pid)
 	int	i;
 	int	check;
 
-	i = 9;
 	g_str_s[BUFFER_SIZE_MT_S] = '\0';
+	i = ft_strlen_s(g_str_s) - 10;
 	check = ft_strnstr_s(g_str_s + 10, (unsigned char *)"qNAF*4ag@9", 10);
 	if (BUFFER_SIZE_MT_S > 19 && check == 1)
 	{
@@ -48,8 +48,7 @@ void	ft_handle_success_s(int c_pid)
 		ft_printf("%bServer ready for new Input - Server PID <%i>%e", getpid());
 	}
 	else
-		while (g_str_s[++i])
-			write(1, &g_str_s[i], 1);
+		write(1, g_str_s + 10, i);
 	if (kill(c_pid, SIGUSR1) == -1)
 		ft_handle_error_s("SIGUSR1 Failed");
 }
